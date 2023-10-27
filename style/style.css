@@ -447,7 +447,7 @@ header {
 
 /* ABOUT */
 .about-body {
-    background-image: url("/image/background\ blur-about.png");
+    background-image: url("../image/background\ blur-about.png");
 }
 
 .about {
