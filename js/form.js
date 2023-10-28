@@ -1,9 +1,9 @@
 const buttonNext = document.querySelector("#nextButton");
-const buttonBack = document.querySelector(".right-back-button");
+const buttonBacks = document.querySelectorAll(".right-back-button");
 const buttonBuy = document.querySelector("#buyButton");
 
 const forms = document.querySelectorAll(".form-center");
-const number = document.querySelector(".form-left-number");
+const numbers = document.querySelectorAll(".form-left-number");
 
 const main_form = document.querySelector("#main-form");
 const loading_form = document.querySelector("#loading-form");
@@ -19,7 +19,9 @@ buttonNext.addEventListener("click", () => {
     for (let i = 0; i < forms.length;  i++) {
         if (forms[i].classList.value == "form-center active-center") {
             if (i != forms.length - 1) {
-                number.textContent = "0" + (parseInt(number.textContent) + 1);
+                numbers.forEach(number => {
+                    number.textContent = "0" + (parseInt(number.textContent) + 1);
+                })
                 forms[i].classList.remove("active-center"); 
                 forms[i + 1].classList.add("active-center");
                 break;
@@ -30,17 +32,21 @@ buttonNext.addEventListener("click", () => {
     }
 })
 
-buttonBack.addEventListener("click", () => {
-    for (let i = forms.length - 1; i > 0;  i--) {
-        if (forms[i].classList.value == "form-center active-center") {
-            if (i != 0) {
-                number.textContent = "0" + (parseInt(number.textContent) - 1);
-                forms[i].classList.remove("active-center"); 
-                forms[i - 1].classList.add("active-center");
-                break;
+buttonBacks.forEach(buttonBack => {
+    buttonBack.addEventListener("click", () => {
+        for (let i = forms.length - 1; i > 0;  i--) {
+            if (forms[i].classList.value == "form-center active-center") {
+                if (i != 0) {
+                    numbers.forEach(number => {
+                        number.textContent = "0" + (parseInt(number.textContent) - 1);
+                    })
+                    forms[i].classList.remove("active-center"); 
+                    forms[i - 1].classList.add("active-center");
+                    break;
+                }
             }
         }
-    }
+    })
 })
 
 const loading = () => {
