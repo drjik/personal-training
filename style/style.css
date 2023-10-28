@@ -2450,11 +2450,16 @@ header {
     .form.form-active {
         display: flex;
     }
+
+    .inside-poll-buttons {
+        display: flex;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 580px) {
     body, .about-body {
-        background-image: url("/image/background\ blur-360.png");
+        background-image: url("../image/background\ blur-360.png");
         background-size: contain;
     }
 }
