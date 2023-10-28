@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body class="about-body">
+    <div class="burger">
+        <div class="burger-inside">
+            <div class="burger-close">
+                <svg id="burgerClosed" width="36" height="27" viewBox="0 0 36 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="17" y="12" width="2" height="2" rx="1" fill="#E8FF5E"/>
+                    <rect x="6.68628" y="-0.142578" width="36" height="2" rx="1" transform="rotate(45 6.68628 -0.142578)" fill="#E8FF5E"/>
+                    <rect x="3.85791" y="25.3135" width="36" height="2" rx="1" transform="rotate(-45 3.85791 25.3135)" fill="#E8FF5E"/>
+                    <rect x="17" y="12" width="2" height="2" rx="1" fill="#E8FF5E"/>
+                </svg>
+            </div> 
+            <div class="burger-bottom">
+                <div class="burger-links">
+                    <div class="burger-link"><a href="./index.html">ГЛАВНАЯ</a></div>
+                    <div class="burger-link"><a href="./about.html">О ПРОГРАММЕ</a></div>
+                    <div class="burger-link active-link"><a href="./about-us.html">О НАС</a></div>
+                    <div class="burger-link"><a href="./contact.html">КОНТАКТЫ</a></div>
+                </div>
+            </div>
+        </div>        
+    </div>
     <div class="header">
         <header>
             <div class="header-links">
@@ -16,6 +36,14 @@
                 <div class="header-link last-link"><a href="./contact.html">КОНТАКТЫ</a></div>
             </div>
         </header>
+    </div>
+    <div class="burger-button">
+        <svg id="burgerButton" class="active-burger-button" width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="2" rx="1" fill="#E8FF5E"/>
+            <rect y="10" width="36" height="2" rx="1" fill="#E8FF5E"/>
+            <rect y="10" width="36" height="2" rx="1" fill="#E8FF5E"/>
+            <rect y="20" width="36" height="2" rx="1" fill="#E8FF5E"/>
+        </svg>            
     </div>
     <div class="about-us">
         <div class="about-us-inside">
@@ -54,5 +82,6 @@
     </div>
     <script src="./js/faq.js"></script>
     <script src="./js/animation.js"></script>
+    <script src="./js/burger.js"></script>
 </body>
 </html>
